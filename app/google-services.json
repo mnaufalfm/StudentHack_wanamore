@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "764450104847",
+    "firebase_url": "https://wanamore-studenthack.firebaseio.com",
+    "project_id": "wanamore-studenthack",
+    "storage_bucket": "wanamore-studenthack.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764450104847:android:a75b9c244f46a2f7",
+        "android_client_info": {
+          "package_name": "com.example.android.studenthack_wanamore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "764450104847-s0c11612aq8etmhrb5dpui1jsaaiet80.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.studenthack_wanamore",
+            "certificate_hash": "5F1FC1225C554FE95AF2FCE93E536D479506B7A0"
+          }
+        },
+        {
+          "client_id": "764450104847-0voos5491e75n2ckbjc1qj5tnb20d20c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmFrCrQIiu-yCrP6xP7QGE6-pt_XH1rR8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "764450104847-0voos5491e75n2ckbjc1qj5tnb20d20c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
