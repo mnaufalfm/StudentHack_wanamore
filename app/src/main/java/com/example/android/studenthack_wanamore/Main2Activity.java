@@ -23,7 +23,7 @@ public class Main2Activity extends AppCompatActivity implements ISiswa{
 
         //ApiSiswa.registrasi(siswa);
 
-        String[] matpel = {"Matematika","Fisika","Kimia"};
+        String matpel = "Matematika,Fisika,Kimia";
 
         ModelGuru guru = new ModelGuru("William","G64140018","LP",matpel,"085693326656","Gak punya rumah","anggunsuliarahmi@gmail.com");
 

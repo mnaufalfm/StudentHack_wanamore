@@ -11,13 +11,13 @@ public class ModelGuru implements Parcelable {
     private String nama;
     private String nip;
     private String jk;
-    private String[] matpel;
+    private String matpel;
     private String nohp;
     private String alamat;
     private String email;
 
-    public ModelGuru(String nama, String nip, String jk, String[] matpel, String nohp, String alamat, String email) {
-        this.nama = nama;
+    public ModelGuru(String name, String nip, String jk, String matpel, String nohp, String alamat, String email) {
+        this.nama = name;
         this.nip = nip;
         this.jk = jk;
         this.matpel = matpel;
@@ -50,11 +50,11 @@ public class ModelGuru implements Parcelable {
         this.jk = jk;
     }
 
-    public String[] getMatpel() {
+    public String getMatpel() {
         return matpel;
     }
 
-    public void setMatpel(String[] matpel) {
+    public void setMatpel(String matpel) {
         this.matpel = matpel;
     }
 
@@ -92,7 +92,7 @@ public class ModelGuru implements Parcelable {
         dest.writeString(this.nama);
         dest.writeString(this.nip);
         dest.writeString(this.jk);
-        dest.writeStringArray(this.matpel);
+        dest.writeString(this.matpel);
         dest.writeString(this.nohp);
         dest.writeString(this.alamat);
         dest.writeString(this.email);
@@ -102,7 +102,7 @@ public class ModelGuru implements Parcelable {
         this.nama = in.readString();
         this.nip = in.readString();
         this.jk = in.readString();
-        this.matpel = in.createStringArray();
+        this.matpel = in.readString();
         this.nohp = in.readString();
         this.alamat = in.readString();
         this.email = in.readString();
