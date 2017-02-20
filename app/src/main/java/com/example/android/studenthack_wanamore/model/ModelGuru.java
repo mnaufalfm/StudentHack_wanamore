@@ -15,9 +15,13 @@ public class ModelGuru implements Parcelable {
     private String nohp;
     private String alamat;
     private String email;
+    private String tglahir;
+    private String idkelas;
+    private String pass;
 
-    public ModelGuru(String name, String nip, String jk, String matpel, String nohp, String alamat, String email) {
+    public ModelGuru(String name, String pass, String nip, String jk, String matpel, String nohp, String alamat, String email, String tglahir, String idkelas) {
         this.nama = name;
+        this.pass = pass;
         this.nip = nip;
         this.jk = jk;
         this.matpel = matpel;
@@ -91,21 +95,27 @@ public class ModelGuru implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.nama);
         dest.writeString(this.nip);
+        dest.writeString(this.pass);
         dest.writeString(this.jk);
         dest.writeString(this.matpel);
         dest.writeString(this.nohp);
         dest.writeString(this.alamat);
         dest.writeString(this.email);
+        dest.writeString(this.tglahir);
+        dest.writeString(this.idkelas);
     }
 
     protected ModelGuru(Parcel in) {
         this.nama = in.readString();
+        this.pass = in.readString();
         this.nip = in.readString();
         this.jk = in.readString();
         this.matpel = in.readString();
         this.nohp = in.readString();
         this.alamat = in.readString();
         this.email = in.readString();
+        this.tglahir = in.readString();
+        this.idkelas = in.readString();
     }
 
     public static final Creator<ModelGuru> CREATOR = new Creator<ModelGuru>() {
@@ -119,4 +129,32 @@ public class ModelGuru implements Parcelable {
             return new ModelGuru[size];
         }
     };
+
+    public String getTglahir() {
+        return tglahir;
+    }
+
+    public void setTglahir(String tglahir) {
+        this.tglahir = tglahir;
+    }
+
+    public String getIdkelas() {
+        return idkelas;
+    }
+
+    public void setIdkelas(String idkelas) {
+        this.idkelas = idkelas;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
+    public static Creator<ModelGuru> getCREATOR() {
+        return CREATOR;
+    }
 }
