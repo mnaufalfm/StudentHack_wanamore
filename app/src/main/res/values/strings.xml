@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">StudentHack-wanamore</string>
+    <string name="title_activity_beranda_guru">BerandaGuruActivity</string>
 </resources>

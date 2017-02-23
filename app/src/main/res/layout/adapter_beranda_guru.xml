@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/foto_beranda_guru"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ahmad Abdullah"
+        android:layout_toRightOf="@+id/foto_beranda_guru"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:id="@+id/nama_beranda"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nama_beranda"
+        android:layout_toRightOf="@+id/foto_beranda_guru"
+        android:text="18 menit yang lalu"
+        android:textSize="10dp"
+        android:layout_marginLeft="10dp"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/foto_beranda_guru"
+        android:text="Ini adalah isi dari statusnya wkwkwkwk pada suatu hari segala macen dan ya gitu deh pokoknya"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/text_beranda"
+
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coba"
+        android:layout_below="@+id/text_beranda"
+        android:id="@+id/gambar_beranda"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hastag_beranda"
+        android:layout_below="@+id/gambar_beranda"
+        android:layout_marginLeft="10dp"
+        android:text="#akusayangdia #akucintadia #wkwkwkwk"
+
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hastag_beranda"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/love"
+        android:src="@drawable/ic_action_heart"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/love"
+        android:layout_below="@id/hastag_beranda"
+        android:src="@drawable/ic_comment"
+        android:layout_marginTop="5dp"
+        />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
