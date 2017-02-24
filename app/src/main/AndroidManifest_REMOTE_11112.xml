@@ -32,14 +32,10 @@
             android:name=".BerandaGuruActivity"
             android:label="@string/title_activity_beranda_guru"
             android:theme="@style/AppTheme" />
-
-        <activity android:name=".CreatePost"></activity>
-
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
         <activity android:name=".view.TambahKelas"></activity>
-
     </application>
 
 </manifest>
