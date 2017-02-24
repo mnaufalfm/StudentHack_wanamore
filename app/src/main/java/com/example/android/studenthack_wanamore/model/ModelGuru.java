@@ -3,6 +3,8 @@ package com.example.android.studenthack_wanamore.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.Arrays;
+
 /**
  * Created by kirra on 18/02/17.
  */
@@ -19,15 +21,17 @@ public class ModelGuru implements Parcelable {
     private String idkelas;
     private String pass;
 
-    public ModelGuru(String name, String pass, String nip, String jk, String matpel, String nohp, String alamat, String email, String tglahir, String idkelas) {
+    public ModelGuru(String name, String pass, String nip, String jk, String[] matpel, String nohp, String alamat, String email, String tglahir, String idkelas) {
         this.nama = name;
         this.pass = pass;
         this.nip = nip;
         this.jk = jk;
-        this.matpel = matpel;
+        this.matpel = Arrays.toString(matpel).replaceAll("\\[|\\]|\\s", "");
         this.nohp = nohp;
         this.alamat = alamat;
         this.email = email;
+        this.tglahir = tglahir;
+        this.idkelas = idkelas;
     }
 
     public String getNama() {
