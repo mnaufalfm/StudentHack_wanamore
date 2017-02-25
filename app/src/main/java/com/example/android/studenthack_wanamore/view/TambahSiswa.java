@@ -1,4 +1,4 @@
-package com.example.android.studenthack_wanamore.view;
+/*package com.example.android.studenthack_wanamore.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -38,4 +38,4 @@ public class TambahSiswa extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
     }
-}
+}*/

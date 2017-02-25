@@ -4,6 +4,8 @@ import android.graphics.PorterDuff;
 import android.util.Log;
 
 import com.example.android.studenthack_wanamore.Const;
+import com.example.android.studenthack_wanamore.interfaces.ISekolah;
+import com.example.android.studenthack_wanamore.model.ModelOrtu;
 import com.example.android.studenthack_wanamore.model.ModelSekolah;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,25 +26,31 @@ public class APiSekolah {
         myRef.child(Const.nodesekolah).push().setValue(sekolah);
     }
 
-    public static ModelSekolah getSekolah(String namasekolah) {
+    public static void getSekolah(final ISekolah isekolah, final String namasekolah) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
 
-        final ModelSekolah[] model = new ModelSekolah[1];
+        //final ModelSekolah[] model = new ModelSekolah[1];
 
         myRef.child(Const.nodesekolah).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                model[0] = dataSnapshot.getValue(ModelSekolah.class);
+                ModelSekolah model = new ModelSekolah();
+                for (DataSnapshot ms: dataSnapshot.getChildren()) {
+                    if (ms.child("nama").getValue() == namasekolah) {
+                        model = dataSnapshot.getValue(ModelSekolah.class);
+                        break;
+                    }
+                }
                 /*if (model[0] != null) Log.i("Nama: ", model[0].getNama());
                 else Log.i("Pesan: ", "Kosong coy");*/
+                isekolah.BerhasilDapetModel(model);
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Log.i("Pesan Error",databaseError.getMessage());
+                isekolah.GagalDapetModel(databaseError.toString());
             }
         });
-        return model[0];
     }
 }
