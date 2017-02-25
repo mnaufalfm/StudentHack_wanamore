@@ -1,19 +1,18 @@
 package com.example.android.studenthack_wanamore.api;
 
-import com.example.android.studenthack_wanamore.Const;
-import com.example.android.studenthack_wanamore.model.ModelKelas;
+import com.example.android.studenthack_wanamore.model.ModelSekolah;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 /**
- * Created by kirra on 18/02/17.
+ * Created by Naufal Farras on 24/02/2017.
  */
 
-public class APIKelas {
-    public static void tambahkelas(ModelKelas kelas) {
+public class APiSekolah {
+    public static void registrasi(ModelSekolah sekolah) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
 
-        myRef.child(Const.nodekelas).push().setValue(kelas);
+
     }
 }

@@ -15,11 +15,19 @@
       },
       "oauth_client": [
         {
+          "client_id": "764450104847-np90cc843b23veiutje00d43arjgt999.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.studenthack_wanamore",
+            "certificate_hash": "97fd603a091baa365622c24215e1004123309540"
+          }
+        },
+        {
           "client_id": "764450104847-s0c11612aq8etmhrb5dpui1jsaaiet80.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.android.studenthack_wanamore",
-            "certificate_hash": "5F1FC1225C554FE95AF2FCE93E536D479506B7A0"
+            "certificate_hash": "5f1fc1225c554fe95af2fce93e536d479506b7a0"
           }
         },
         {

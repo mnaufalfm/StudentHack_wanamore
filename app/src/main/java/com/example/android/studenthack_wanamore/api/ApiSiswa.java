@@ -24,7 +24,9 @@ public class ApiSiswa {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
 
-        myRef.child(Const.nodesiswa).push().setValue(modelSiswa);
+        myRef.child(Const.nodesiswa).child(modelSiswa.getEmail().replace(".",",")).setValue(modelSiswa);
+        myRef.child(Const.nodeuser).child(modelSiswa.getEmail().replace(".",",")).setValue(modelSiswa);
+        myRef.child(Const.nodeuser).child(modelSiswa.getEmail().replace(".",",")).child("jenis").setValue("siswa");
     }
 
     public static void getList(final Main2Activity main2Activity) {
