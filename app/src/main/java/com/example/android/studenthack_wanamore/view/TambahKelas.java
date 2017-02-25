@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
+import com.example.android.studenthack_wanamore.R;
+
 public class TambahKelas extends AppCompatActivity {
 
     Toolbar toolbar;
