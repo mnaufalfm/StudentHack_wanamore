@@ -1,9 +1,11 @@
 package com.example.android.studenthack_wanamore.api;
 
+import android.content.Context;
 import android.util.Log;
 
 import com.example.android.studenthack_wanamore.Const;
 import com.example.android.studenthack_wanamore.Main2Activity;
+import com.example.android.studenthack_wanamore.interfaces.ISiswa;
 import com.example.android.studenthack_wanamore.model.ModelSiswa;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,10 +26,12 @@ public class ApiSiswa {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
 
-        myRef.child(Const.nodesiswa).push().setValue(modelSiswa);
+        myRef.child(Const.nodesiswa).child(modelSiswa.getEmail().replace(".",",")).setValue(modelSiswa);
+        myRef.child(Const.nodeuser).child(modelSiswa.getEmail().replace(".",",")).setValue(modelSiswa);
+        myRef.child(Const.nodeuser).child(modelSiswa.getEmail().replace(".",",")).child("jenis").setValue("siswa");
     }
 
-    public static void getList(final Main2Activity main2Activity) {
+    public static void getList(final ISiswa iSiswa) {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
@@ -40,12 +44,12 @@ public class ApiSiswa {
                     ModelSiswa a = ms.getValue(ModelSiswa.class);
                     listSiswa.add(a);
                 }
-                main2Activity.onSuccess(listSiswa);
+                iSiswa.onSuccess(listSiswa);
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                main2Activity.onFailed(databaseError.getMessage());
+                iSiswa.onFailed(databaseError.getMessage());
             }
         });
     }

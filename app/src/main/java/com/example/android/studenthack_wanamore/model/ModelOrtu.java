@@ -3,6 +3,8 @@ package com.example.android.studenthack_wanamore.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.Arrays;
+
 /**
  * Created by kambing on 20/02/2017.
  */
@@ -16,13 +18,13 @@ public class ModelOrtu implements Parcelable {
     private String idsiswa;
 
 
-    public ModelOrtu(String nama, String email, String pass, String nohp, String alamat, String idsiswa) {
+    public ModelOrtu(String nama, String email, String pass, String nohp, String alamat, String[] emailsiswa) {
         this.nama = nama;
         this.email = email;
         this.pass = pass;
         this.nohp = nohp;
         this.alamat = alamat;
-        this.idsiswa = idsiswa;
+        this.idsiswa = Arrays.toString(emailsiswa).replaceAll("\\[|\\]|\\s", "");
     }
 
     protected ModelOrtu(Parcel in) {

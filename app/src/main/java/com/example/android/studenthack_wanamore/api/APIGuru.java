@@ -14,6 +14,8 @@ public class APIGuru {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
 
-        myRef.child(Const.nodeguru).push().setValue(modelguru);
+        myRef.child(Const.nodeguru).child(modelguru.getEmail().replace(".",",")).setValue(modelguru);
+        myRef.child(Const.nodeuser).child(modelguru.getEmail().replace(".",",")).setValue(modelguru);
+        myRef.child(Const.nodeuser).child(modelguru.getEmail().replace(".",",")).child("jenis").setValue("guru");
     }
 }
