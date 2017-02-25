@@ -24,13 +24,12 @@
             android:padding="16dp">
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/full_name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp">
 
         <EditText
-            android:id="@+id/your_full_name"
+            android:id="@+id/full_name"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -39,13 +38,12 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/nomor_induk_siswa"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp">
 
         <EditText
-            android:id="@+id/your_nomor_induk_siswa"
+            android:id="@+id/nomor_induk_siswa"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -54,7 +52,6 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/kelas"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp">
@@ -69,17 +66,16 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/jenis_kelamin_siswa"
+
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp">
 
         <TextView
+            android:id="@+id/jenis_kelamin_siswa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:text="Jenis Kelamin"
-            android:id="@+id/textView2"
             android:layout_below="@+id/editText"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
@@ -110,13 +106,12 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/email_siswa"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp">
 
         <EditText
-            android:id="@+id/your_email_siswa"
+            android:id="@+id/email_siswa"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -125,13 +120,12 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/email_orangtua"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp">
 
         <EditText
-            android:id="@+id/your_email_orangtua"
+            android:id="@+id/email_orangtua"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -140,13 +134,12 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/nomor_hp_siswa"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp">
 
         <EditText
-            android:id="@+id/your_nomor_hp_siswa"
+            android:id="@+id/nomor_hp_siswa"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -154,16 +147,13 @@
             android:inputType="number" />
     </android.support.design.widget.TextInputLayout>
 
-
-
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/password"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp">
 
         <EditText
-            android:id="@+id/create_new_password"
+            android:id="@+id/create_password"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -172,6 +162,7 @@
     </android.support.design.widget.TextInputLayout>
 
     <Button
+        android:id="@+id/btn_tambahsiswa"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
