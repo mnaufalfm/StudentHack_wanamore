@@ -1,13 +1,18 @@
 package com.example.android.studenthack_wanamore.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.android.studenthack_wanamore.BerandaGuruActivity;
+import com.example.android.studenthack_wanamore.CommentPost;
+import com.example.android.studenthack_wanamore.CreatePost;
 import com.example.android.studenthack_wanamore.R;
 import com.example.android.studenthack_wanamore.model.ModelBerandaGuru;
 
@@ -45,6 +50,15 @@ public class AdapterBerandaGuru extends RecyclerView.Adapter<AdapterBerandaGuru.
         holder.namaBeranda.setText(modelguru.getNama());
         holder.textBeranda.setText(modelguru.getCaption());
         holder.hastagBeranda.setText(modelguru.getHastag());
+        holder.comment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CommentPost.start(context);
+
+//                Intent intent = new Intent(AdapterBerandaGuru.this,CommentPost.class);
+  //              startActivity(intent);
+            }
+        });
 
     }
 
@@ -61,6 +75,7 @@ public class AdapterBerandaGuru extends RecyclerView.Adapter<AdapterBerandaGuru.
         ImageView gambarBeranda;
         TextView hastagBeranda;
         ImageView love;
+        ImageView comment;
         public ViewHolder(View itemView) {
             super(itemView);
             fotoBerandaGuru = (CircleImageView) itemView.findViewById(R.id.foto_beranda_guru);
@@ -68,6 +83,7 @@ public class AdapterBerandaGuru extends RecyclerView.Adapter<AdapterBerandaGuru.
             textBeranda = (TextView) itemView.findViewById(R.id.text_beranda);
             gambarBeranda = (ImageView) itemView.findViewById(R.id.gambar_beranda);
             hastagBeranda = (TextView) itemView.findViewById(R.id.hastag_beranda);
+            comment = (ImageView) itemView.findViewById(R.id.comment);
             love = (ImageView) itemView.findViewById(R.id.love);
 
         }

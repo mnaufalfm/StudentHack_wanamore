@@ -9,5 +9,58 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.android.studenthack_wanamore.CreatePost">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/foto_create_post"
 
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ahmad Abdullah"
+        android:layout_toRightOf="@+id/foto_create_post"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:id="@+id/nama_create_post"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/isi_post"
+        android:layout_below="@+id/foto_create_post"
+        android:hint="Isi post..."
+    />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/insert_photo"
+        android:layout_below="@+id/isi_post"
+        android:src="@drawable/ic_insert_photo"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/insert_camera"
+        android:layout_toRightOf="@+id/insert_photo"
+        android:layout_below="@+id/isi_post"
+        android:src="@drawable/ic_camera_alt"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/insert_tag"
+        android:src="@drawable/ic_action_tag"
+        android:layout_alignBottom="@+id/insert_camera"
+        android:layout_toRightOf="@+id/insert_camera"
+        android:layout_below="@+id/isi_post"
+        />
 </RelativeLayout>
