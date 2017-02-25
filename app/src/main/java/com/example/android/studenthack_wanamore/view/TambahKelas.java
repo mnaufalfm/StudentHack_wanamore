@@ -1,4 +1,4 @@
-package com.example.android.studenthack_wanamore.view;
+/*package com.example.android.studenthack_wanamore.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,4 +20,4 @@ public class TambahKelas extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
-}
+}*/

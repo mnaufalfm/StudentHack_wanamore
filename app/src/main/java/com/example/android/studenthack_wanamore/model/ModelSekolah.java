@@ -15,6 +15,8 @@ public class ModelSekolah implements Parcelable {
     private String situs;
     private String pass;
 
+    public ModelSekolah() {}
+
     public ModelSekolah(String nama, String email, String notelp, String alamat, String situs, String pass) {
         this.nama = nama;
         this.email = email;

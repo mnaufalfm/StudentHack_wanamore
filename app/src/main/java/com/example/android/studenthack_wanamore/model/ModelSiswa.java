@@ -16,6 +16,8 @@ public class ModelSiswa implements Parcelable {
     private String email;
     private String notelp;
 
+    public ModelSiswa() {}
+
     public ModelSiswa(String nama, String noinduk, String jenis_kelamin, String password, String email_ortu, String email, String notelp) {
         this.nama = nama;
         this.noinduk = noinduk;
