@@ -31,7 +31,9 @@
         <activity
             android:name=".BerandaGuruActivity"
             android:label="@string/title_activity_beranda_guru"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme" >
+
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
