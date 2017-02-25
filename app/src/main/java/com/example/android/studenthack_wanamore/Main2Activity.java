@@ -8,6 +8,7 @@ import com.example.android.studenthack_wanamore.api.APIGuru;
 import com.example.android.studenthack_wanamore.api.APIOrtu;
 import com.example.android.studenthack_wanamore.api.APiSekolah;
 import com.example.android.studenthack_wanamore.api.ApiSiswa;
+import com.example.android.studenthack_wanamore.interfaces.ISekolah;
 import com.example.android.studenthack_wanamore.interfaces.ISiswa;
 import com.example.android.studenthack_wanamore.model.ModelGuru;
 import com.example.android.studenthack_wanamore.model.ModelOrtu;
@@ -16,7 +17,7 @@ import com.example.android.studenthack_wanamore.model.ModelSiswa;
 
 import java.util.List;
 
-public class Main2Activity extends AppCompatActivity implements ISiswa{
+public class Main2Activity extends AppCompatActivity implements ISekolah{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +51,7 @@ public class Main2Activity extends AppCompatActivity implements ISiswa{
 
     }
 
-    @Override
+    /*@Override
     public void onSuccess(List<ModelSiswa> modelSiswas) {
         Log.i("Data", "onCreate: "+ modelSiswas.size() +" "+ modelSiswas.get(0).getNama());
     }
@@ -58,5 +59,5 @@ public class Main2Activity extends AppCompatActivity implements ISiswa{
     @Override
     public void onFailed(String error) {
 
-    }
+    }*/
 }

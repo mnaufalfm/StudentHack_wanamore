@@ -15,13 +15,15 @@ public class ModelSiswa implements Parcelable {
     private String email_ortu;
     private String email;
     private String notelp;
+    private String kelas;
 
     public ModelSiswa() {}
 
 
-    public ModelSiswa(String nama, String noinduk, String jenis_kelamin, String password, String email_ortu, String email, String notelp) {
+    public ModelSiswa(String nama, String noinduk, String jenis_kelamin, String kelas, String password, String email_ortu, String email, String notelp) {
         this.nama = nama;
         this.noinduk = noinduk;
+        this.kelas = kelas;
         this.jenis_kelamin = jenis_kelamin;
         this.password = password;
         this.email_ortu = email_ortu;
@@ -70,6 +72,7 @@ public class ModelSiswa implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.nama);
         dest.writeString(this.noinduk);
+        dest.writeString(this.kelas);
         dest.writeString(this.jenis_kelamin);
         dest.writeString(this.password);
         dest.writeString(this.email_ortu);
@@ -80,6 +83,7 @@ public class ModelSiswa implements Parcelable {
     protected ModelSiswa(Parcel in) {
         this.nama = in.readString();
         this.noinduk = in.readString();
+        this.kelas = in.readString();
         this.jenis_kelamin = in.readString();
         this.password = in.readString();
         this.email_ortu = in.readString();
@@ -125,5 +129,13 @@ public class ModelSiswa implements Parcelable {
 
     public static Creator<ModelSiswa> getCREATOR() {
         return CREATOR;
+    }
+
+    public String getKelas() {
+        return kelas;
+    }
+
+    public void setKelas(String kelas) {
+        this.kelas = kelas;
     }
 }
