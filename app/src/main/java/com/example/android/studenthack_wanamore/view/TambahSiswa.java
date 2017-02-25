@@ -1,4 +1,4 @@
-/*package com.example.android.studenthack_wanamore.view;
+package com.example.android.studenthack_wanamore.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -42,12 +42,10 @@ public class TambahSiswa extends AppCompatActivity {
         nomorInduk = (EditText) findViewById(R.id.nomor_induk_siswa);
         kelasSiswa = (EditText) findViewById(R.id.kelas_siswa);
         jenisKelamin=(RadioGroup)findViewById(R.id.radioGroup);
-        btnDisplay=(Button)findViewById(R.id.button);
         emailSiswa = (EditText) findViewById(R.id.email_siswa);
         emailOrtu = (EditText) findViewById(R.id.email_orangtua);
         nomorHP = (EditText) findViewById(R.id.nomor_hp_siswa);
         password = (EditText) findViewById(R.id.create_password);
-
 
         tambahsiswaBtn = (Button) findViewById(R.id.btn_tambahsiswa);
         tambahsiswaBtn.setOnClickListener(new View.OnClickListener() {
@@ -68,4 +66,4 @@ public class TambahSiswa extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
     }
-}*/
+}

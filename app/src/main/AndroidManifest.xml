@@ -31,11 +31,27 @@
         <activity
             android:name=".BerandaGuruActivity"
             android:label="@string/title_activity_beranda_guru"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            </activity>
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".view.TambahKelas"></activity>
+        <activity android:name=".view.TambahKelas" />
+        <activity
+            android:name=".view.MasukKelasActivity"
+            android:label="@string/title_activity_masuk_kelas"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
