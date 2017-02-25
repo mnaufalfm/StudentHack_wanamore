@@ -47,8 +47,19 @@ public class Main2Activity extends AppCompatActivity implements ISekolah{
 
         //APIGuru.registrasi(guru);
 
-        ApiSiswa.getList(this);
+        //ApiSiswa.getList(this);
+        APiSekolah.getSekolah(this,"SDIT Bani Adam");
 
+    }
+
+    @Override
+    public void BerhasilDapetModel(ModelSekolah sekolah) {
+        Log.i("Nama Sekolah= ",sekolah.getNama());
+    }
+
+    @Override
+    public void GagalDapetModel(String pesan) {
+        Log.i("Pesan",pesan);
     }
 
     /*@Override
