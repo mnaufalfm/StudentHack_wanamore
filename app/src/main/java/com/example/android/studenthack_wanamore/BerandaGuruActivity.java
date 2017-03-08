@@ -39,7 +39,7 @@ public class BerandaGuruActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BerandaGuruActivity.this,CreatePost.class);
+                Intent intent = new Intent(BerandaGuruActivity.this,CreatePost1.class);
                 startActivity(intent);
 //                Log.e("coba","coba");
             }
