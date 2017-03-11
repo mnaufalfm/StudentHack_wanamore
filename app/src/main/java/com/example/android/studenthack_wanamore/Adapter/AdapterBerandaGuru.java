@@ -1,27 +1,19 @@
-package com.example.android.studenthack_wanamore.Adapter;
+package com.example.android.studenthack_wanamore.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.android.studenthack_wanamore.BerandaGuruActivity;
 import com.example.android.studenthack_wanamore.CommentPost;
-import com.example.android.studenthack_wanamore.CreatePost;
 import com.example.android.studenthack_wanamore.R;
 import com.example.android.studenthack_wanamore.model.ModelBerandaGuru;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
