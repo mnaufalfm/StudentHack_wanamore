@@ -23,7 +23,11 @@ public class APiSekolah {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
 
-        myRef.child(Const.nodesekolah).push().setValue(sekolah);
+        myRef.child(Const.nodesekolah).child(sekolah.getEmail().replace(".",",")).setValue(sekolah);
+        myRef.child(Const.nodeuser).child(sekolah.getEmail().replace(".",",")).setValue(sekolah);
+        myRef.child(Const.nodeuser).child(sekolah.getEmail().replace(".",",")).child("jenis").setValue("5");
+        myRef.child(Const.nodesekolah_kelas).child(sekolah.getEmail().replace(".",","));
+        myRef.child(Const.nodesekolah_guru).child(sekolah.getEmail().replace(".",","));
     }
 
     public static void getSekolah(final ISekolah isekolah, final String namasekolah) {

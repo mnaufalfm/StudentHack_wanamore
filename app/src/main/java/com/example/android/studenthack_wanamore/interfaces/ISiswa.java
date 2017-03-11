@@ -9,6 +9,9 @@ import java.util.List;
  */
 
 public interface ISiswa {
-    void onSuccess(List<ModelSiswa> modelSiswas);
-    void onFailed(String error);
+    void getListSuccess(List<ModelSiswa> siswa);
+    void getListFailed(String error);
+
+    void getListAllSuccess(List<ModelSiswa> siswa);
+    void getListAllFailed(String pesan);
 }

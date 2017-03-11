@@ -9,7 +9,13 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.android.studenthack_wanamore.view.LoginActivity">
-
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="7dp" />
     <!-- Login progress -->
     <ScrollView
         android:id="@+id/login_form"

@@ -21,6 +21,21 @@ public class ModelGuru implements Parcelable {
     private String idkelas;
     private String pass;
 
+    public ModelGuru() {}
+
+    public ModelGuru(String name, String pass, String nip, String jk, String[] matpel, String nohp, String alamat, String email, String tglahir) {
+        this.nama = name;
+        this.pass = pass;
+        this.nip = nip;
+        this.jk = jk;
+        this.matpel = Arrays.toString(matpel).replaceAll("\\[|\\]|\\s", "");
+        this.nohp = nohp;
+        this.alamat = alamat;
+        this.email = email;
+        this.tglahir = tglahir;
+        this.idkelas = "";
+    }
+
     public ModelGuru(String name, String pass, String nip, String jk, String[] matpel, String nohp, String alamat, String email, String tglahir, String idkelas) {
         this.nama = name;
         this.pass = pass;
