@@ -11,4 +11,11 @@ public class Const {
     public static String nodeortu = "ortu";
     public static String nodekelas = "kelas";
     public static String nodesekolah = "sekolah";
+    public static String nodekelas_siswa;
+    public static String nodesekolah_guru;
+    public static String nodesekolah_kelas;
+    public static String nodekomen;
+    public static String nodepos_komen;
+    public static String nodepos;
+    public static String nodepos_like;
 }
