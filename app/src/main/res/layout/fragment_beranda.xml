@@ -1,54 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.example.android.studenthack_wanamore.BerandaGuruActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.android.studenthack_wanamore.fragment.Beranda">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.design.widget.TabLayout
-            android:id="@+id/TabLayout"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-
-            />
-        <android.support.v4.view.ViewPager
-            android:id="@+id/viewpager"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            />
-
-    </android.support.design.widget.AppBarLayout>
-
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/add_post"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/ic_create"
-        />
+    <!-- TODO: Update blank fragment layout -->
 
     <RelativeLayout
         android:id="@+id/content_beranda_guru"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="com.example.android.studenthack_wanamore.BerandaGuruActivity"
-        tools:showIn="@layout/activity_beranda_guru">
+        >
         <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/listberanda">
+            android:id="@+id/list_beranda">
         </android.support.v7.widget.RecyclerView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/addpost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:src="@drawable/ic_create"
+            android:layout_marginRight="17dp"
+            android:layout_marginBottom="27dp"
+            android:layout_marginEnd="17dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
     </RelativeLayout>
 
-</android.support.design.widget.CoordinatorLayout>
+
+</FrameLayout>

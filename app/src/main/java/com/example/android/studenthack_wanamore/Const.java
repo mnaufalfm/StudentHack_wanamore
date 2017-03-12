@@ -11,4 +11,5 @@ public class Const {
     public static String nodeortu = "ortu";
     public static String nodekelas = "kelas";
     public static String nodesekolah = "sekolah";
+    public static String nodepos = "post";
 }

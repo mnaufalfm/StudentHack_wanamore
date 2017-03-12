@@ -42,6 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/nama_beranda"
         android:layout_toRightOf="@+id/foto_beranda_guru"
+        android:id="@+id/tanggal"
         android:text="18 menit yang lalu"
         android:textSize="10dp"
         android:layout_marginLeft="10dp"
@@ -72,40 +73,9 @@
         android:text="#akusayangdia #akucintadia #wkwkwkwk"
 
         />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/hastag_beranda"
-        android:layout_marginLeft="10dp"
-        android:id="@+id/love"
-        android:src="@drawable/ic_action_heart"
-        />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/love"
-        android:id="@+id/comment"
-        android:layout_marginLeft="50px"
-        android:layout_below="@id/hastag_beranda"
-        android:src="@drawable/ic_comment"
-        android:layout_marginTop="5dp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/comment"
-        android:id="@+id/liker"
-        android:layout_marginLeft="20px"
-        android:text="1 Suka"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/comment"
-        android:layout_toRightOf="@+id/liker"
-        android:layout_marginLeft="20px"
-        android:text="5 Komentar"
-        />
+
+
+
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 </RelativeLayout>

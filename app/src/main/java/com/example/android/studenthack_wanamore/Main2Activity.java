@@ -6,12 +6,14 @@ import android.util.Log;
 
 import com.example.android.studenthack_wanamore.api.APIGuru;
 import com.example.android.studenthack_wanamore.api.APIOrtu;
+import com.example.android.studenthack_wanamore.api.APIPost;
 import com.example.android.studenthack_wanamore.api.APiSekolah;
 import com.example.android.studenthack_wanamore.api.ApiSiswa;
 import com.example.android.studenthack_wanamore.interfaces.ISekolah;
 import com.example.android.studenthack_wanamore.interfaces.ISiswa;
 import com.example.android.studenthack_wanamore.model.ModelGuru;
 import com.example.android.studenthack_wanamore.model.ModelOrtu;
+import com.example.android.studenthack_wanamore.model.ModelPost;
 import com.example.android.studenthack_wanamore.model.ModelSekolah;
 import com.example.android.studenthack_wanamore.model.ModelSiswa;
 
@@ -49,6 +51,8 @@ public class Main2Activity extends AppCompatActivity implements ISekolah{
 
         //ApiSiswa.getList(this);
         APiSekolah.getSekolah(this,"SDIT Bani Adam");
+        ModelPost pos = new ModelPost("anggunasr@gmail.com","coba doang","pos pertamaku loh");
+        APIPost.tambahPost(pos);
 
     }
 

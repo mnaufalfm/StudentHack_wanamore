@@ -1,23 +1,27 @@
 package com.example.android.studenthack_wanamore.fragment;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import com.example.android.studenthack_wanamore.CreatePost1;
 import com.example.android.studenthack_wanamore.R;
-import com.example.android.studenthack_wanamore.adapter.AdapterBerandaGuru;
-import com.example.android.studenthack_wanamore.model.ModelBerandaGuru;
+import com.example.android.studenthack_wanamore.adapter.AdapterBeranda;
+import com.example.android.studenthack_wanamore.model.ModelPost;
+import com.google.firebase.auth.FirebaseAuthException;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,32 +34,30 @@ import butterknife.ButterKnife;
  * Activities that contain this fragment must implement the
  * {@link OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link BerandaGuru#newInstance} factory method to
+ * Use the {@link Beranda#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BerandaGuru extends Fragment {
+public class Beranda extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    @BindView(R.id.TabLayout)
-    android.support.design.widget.TabLayout TabLayout;
-    @BindView(R.id.viewpager)
-    ViewPager viewpager;
-    @BindView(R.id.add_post)
-    FloatingActionButton addPost;
-    @BindView(R.id.listberanda)
-    RecyclerView listberanda;
+    private List<ModelPost> modelposts;
+    FloatingActionButton button1;
+    RecyclerView listBeranda;
     @BindView(R.id.content_beranda_guru)
     RelativeLayout contentBerandaGuru;
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("post");
+    AdapterBeranda adapter;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
     private OnFragmentInteractionListener mListener;
 
-    public BerandaGuru() {
+    public Beranda() {
         // Required empty public constructor
     }
 
@@ -65,11 +67,13 @@ public class BerandaGuru extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment BerandaGuru.
+     * @return A new instance of fragment Beranda.
      */
     // TODO: Rename and change types and number of parameters
-    public static BerandaGuru newInstance(String param1, String param2) {
-        BerandaGuru fragment = new BerandaGuru();
+    public static Beranda newInstance(String param1, String param2) {
+
+
+        Beranda fragment = new Beranda();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -80,6 +84,7 @@ public class BerandaGuru extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -90,34 +95,40 @@ public class BerandaGuru extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_beranda, container, false);
-        ButterKnife.bind(this, view);
+        View rootView = inflater.inflate(R.layout.fragment_beranda, container, false);
+        ButterKnife.bind(this, rootView);
 
-        addPost.setOnClickListener(new View.OnClickListener() {
+        button1 = (FloatingActionButton) rootView.findViewById(R.id.addpost);
+        button1.setOnClickListener(new View.OnClickListener(){}
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),CreatePost1.class);
-                startActivity(intent);
-//                Log.e("coba","coba");
+            public void onClick(View v){
+                Intent intent = new
+
+        }
+        );
+        listBeranda = (RecyclerView) rootView.findViewById(R.id.list_beranda);
+        listBeranda.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL,false));
+        modelposts = new ArrayList<ModelPost>();
+        adapter = new AdapterBeranda(getActivity(),modelposts);
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot s: dataSnapshot.getChildren()){
+                    ModelPost value = s.getValue(ModelPost.class);
+                    modelposts.add(value);
+                    adapter = new AdapterBeranda(getActivity(),modelposts);
+                    listBeranda.setAdapter(adapter);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.w("Failed to read value.",databaseError.toException());
             }
         });
-        ModelBerandaGuru berandaguru = new ModelBerandaGuru("Ryan Baskara1","","18 menit yang lalu","Duch, kw  capeh bangetz","#curhat","");
-        ModelBerandaGuru berandaguru1 = new ModelBerandaGuru("Ryan Baskara2","","18 menit yang lalu","Duch, kw capeh bangetz","#curhat","");
-        ModelBerandaGuru berandaguru2 = new ModelBerandaGuru("Ryan Baskara3","","18 menit yang lalu","Duch, kw capeh bangetz","#curhat","");
-        ModelBerandaGuru berandaguru3 = new ModelBerandaGuru("Ryan Baskara4","","18 menit yang lalu","Duch, kw capeh bangetz","#curhat","");
-        List<ModelBerandaGuru> berandagurulist = new ArrayList<>();
-        berandagurulist.add(berandaguru);
-        berandagurulist.add(berandaguru1);
-        berandagurulist.add(berandaguru2);
-        berandagurulist.add(berandaguru3);
-
-        listberanda.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false));
-        AdapterBerandaGuru adapterBerandaGuru;
-        adapterBerandaGuru = new AdapterBerandaGuru(getActivity(),berandagurulist);
-        listberanda.setAdapter(adapterBerandaGuru);
-
-        return view;
+        return rootView;
     }
+
 
 
 
