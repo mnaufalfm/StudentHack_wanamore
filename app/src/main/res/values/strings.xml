@@ -30,11 +30,11 @@
     <string name="slide_2_title">Change Book!</string>
     <string name="slide_2_desc">Mengubah bentuk buku dari kertas menjadi foto!</string>
 
-    <string name="slide_3_title">Great Heart!</string>
-    <string name="slide_3_desc">Care with App and Heart!</string>
+    <string name="slide_3_title">WIth Heart!</string>
+    <string name="slide_3_desc">Konsultasi langsung kepada guru atau teman tentang kesulitan belahar dengan hatimu!</string>
 
-    <string name="slide_4_title">World Travel</string>
-    <string name="slide_4_desc">Book tickets of any transportation and travel the world!</string>
+    <string name="slide_4_title">Chat</string>
+    <string name="slide_4_desc">Jangan khawatir dengna keadaan anak anda di sekolah, chat saja gurunya!</string>
 
     <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
     <string name="play_again">Play Again</string>

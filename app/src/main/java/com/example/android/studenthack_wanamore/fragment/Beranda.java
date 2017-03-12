@@ -98,14 +98,7 @@ public class Beranda extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_beranda, container, false);
         ButterKnife.bind(this, rootView);
 
-        button1 = (FloatingActionButton) rootView.findViewById(R.id.addpost);
-        button1.setOnClickListener(new View.OnClickListener(){}
-            @Override
-            public void onClick(View v){
-                Intent intent = new
 
-        }
-        );
         listBeranda = (RecyclerView) rootView.findViewById(R.id.list_beranda);
         listBeranda.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL,false));
         modelposts = new ArrayList<ModelPost>();

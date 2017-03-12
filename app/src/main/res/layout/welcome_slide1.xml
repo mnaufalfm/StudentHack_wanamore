@@ -19,10 +19,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/slide_1_title"
+            android:text="Selamat datang di StudentHack"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/slide_title"
-            android:textStyle="bold" />
+            android:textSize="50px"
+            android:textStyle="bold"
+
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,7 +32,7 @@
             android:layout_marginTop="20dp"
             android:paddingLeft="@dimen/desc_padding"
             android:paddingRight="@dimen/desc_padding"
-            android:text="@string/slide_1_desc"
+            android:text="StudentHack adalah aplikasi yang menghubungkan guru, murid, dan orangtua murid dalam sebuah sekolah"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="@dimen/slide_desc" />
