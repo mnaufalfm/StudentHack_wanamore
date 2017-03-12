@@ -9,6 +9,11 @@ import java.util.List;
  */
 
 public interface IPost {
+<<<<<<< HEAD
     void getListAllPostSuccess(List<ModelPost> pos);
     void getListAllPostFailed(String pesan);
+=======
+    void getListAllPostSuccess (List<ModelPost> pos);
+    void getListAllPostFailed (String pesan);
+>>>>>>> 3d0055b37393cce67915b0102424db999ef395a8
 }

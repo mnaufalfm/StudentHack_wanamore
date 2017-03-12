@@ -13,6 +13,21 @@ public class ModelKelas implements Parcelable {
     private String nama;
     private int jumlahsiswa;
 
+    public ModelKelas() {}
+
+    public ModelKelas(String nama, int jumlahsiswa, String idsekolah) {
+        this.idwalas = "";
+        this.nama = nama;
+        this.jumlahsiswa = jumlahsiswa;
+        this.idsekolah = idsekolah;
+    }
+
+    public ModelKelas(String nama, String idwalas, int jumlahsiswa) {
+        this.idwalas = idwalas;
+        this.nama = nama;
+        this.jumlahsiswa = jumlahsiswa;
+        this.idsekolah = "";
+    }
 
     public ModelKelas(String idwalas, String idsekolah, String nama, int jumlahsiswa) {
         this.idwalas = idwalas;

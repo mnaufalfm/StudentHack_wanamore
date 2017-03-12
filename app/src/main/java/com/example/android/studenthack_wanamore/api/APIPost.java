@@ -28,8 +28,13 @@ public class APIPost {
                 if (databaseReference!=null) {
                     idpos[0] = databaseReference.getKey();
                     myRef.child(Const.nodepos).child(idpos[0]).child("idpost").setValue(idpos[0]);
+<<<<<<< HEAD
                  //   myRef.child(Const.nodepos_komen).child(idpos[0]);
                   //  myRef.child(Const.nodepos_like).child(idpos[0]);
+=======
+                    myRef.child(Const.nodepos_komen).child(idpos[0]);
+                    myRef.child(Const.nodepos_like).child(idpos[0]);
+>>>>>>> 3d0055b37393cce67915b0102424db999ef395a8
                 }
             }
         });
